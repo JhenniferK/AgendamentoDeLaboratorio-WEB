@@ -1,0 +1,141 @@
+body {
+    margin: 0px;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(315deg, rgb(161, 31, 152) 3%, rgba(101,0,94,1) 38%);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 900px;
+    height: 85%;
+    max-height: 520px;
+    display: flex;
+    border-top-left-radius: 50px;
+    flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+p {
+    text-align: left;
+}
+
+.horarios {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#horarios-manha {
+    width: 95%;
+    max-width: 900px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.287); 
+    border-collapse: collapse;
+    margin-top: 30px;
+    margin-left: 25px;
+}
+
+th, td {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.disponivel {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.disponivel:hover {
+    background-color: #45a049;
+}
+
+.reservado {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.reservado:hover {
+    background-color: #e53935;
+}

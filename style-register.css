@@ -1,0 +1,168 @@
+body {
+    margin: 0px;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(315deg, rgb(161, 31, 152) 3%, rgba(101,0,94,1) 38%);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 370px;
+    height: 90%;
+    max-height: 430px;
+    display: flex;
+    border-top-left-radius: 50px;
+    border-end-end-radius: 50px;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.register-section {
+    padding: 15px;
+    flex: 2;
+}
+
+.register-section h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: -5px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin: 10px 0px 20px 0px;
+    font-size: 0.85rem;
+    color: #eee;
+}
+
+.form-options label {
+    display: flex;
+    white-space: nowrap;
+}
+
+.btn-cadastro {
+    display: block; 
+    margin: -15px auto 0;
+    margin-top: 13px;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(101, 0, 94, 1);
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.btn-cadastro:hover {
+    background: rgb(161, 31, 152);
+    transform: scale(1.05);
+}
+
+.container a {
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: rgba(101, 0, 94, 1);
+}

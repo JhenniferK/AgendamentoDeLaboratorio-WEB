@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="container">
+        <div class="top-section">
+            <h1>BEM-VINDO!</h1>
+            <p>Sistema de reservas para uso<br>de laboratórios.</p>
+        </div>
+        <div class="login-section" id="login-section">
+            <h2>LOGIN</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input id="matricula" type="text" placeholder="Matrícula">
+                    <span id="matriculaError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <input id="senha" type="password" placeholder="Senha">
+                    <span id="senhaError" class="error"></span>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox">Lembrar usuário
+                    </label>
+                    <a href="#">Esqueci minha senha</a>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+                <p id="sucessMessage" class="sucess"></p>
+            </form>
+        </div>
+        <div class="register-option">
+            <h5>Não possui uma conta?</h5>
+            <a href="register.html" id="go-to-register">Cadastre-se</a>
+        </div>
+    </div>
+</body>
+
+</html>

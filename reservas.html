@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Horário</title>
+    <link rel="stylesheet" href="style-reservas.css">
+</head>
+
+<body>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="container">
+        <div class="reservation"></div>
+        <div class="top-bar">
+            <select id="mes" required="required">
+                <option value="mes">Selecione o mês</option>
+                <option value="Janeiro">Janeiro</option>
+                <option value="Fevereiro">Fevereiro</option>
+                <option value="Março">Março</option>
+                <option value="Abril">Abril</option>
+                <option value="Maio">Maio</option>
+                <option value="Junho">Junho</option>
+                <option value="Julho">Julho</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Setembro">Setembro</option>
+                <option value="Outubro">Outubro</option>
+                <option value="Novembro">Novembro</option>
+                <option value="Dezembro">Dezembro</option>
+            </select>
+            <select id="turno">
+                <option id="turno">Selecione o turno</option>
+                <option id="manha">Manhã</option>
+                <option id="tarde">Tarde</option>
+            </select>
+            <button>Semana Anterior</button>
+            <button>Próxima Semana</button>
+            <button>Concluir Agendamento</button>
+            <button>Sair</button>
+        </div>
+        <div class="horarios">
+            <table id="horarios-manha">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>07:00 - 07:50</td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>07:50 - 08:40</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>08:40 - 09:30</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>09:50 - 10:40</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>10:40 - 11:30</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>11:30 - 12:20</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="horarios-tarde" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>13:50 - 14:40</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>14:40 - 15:30</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>15:50 - 16:40</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                    <tr>
+                        <td>16:40 - 17:30</td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="reservado">Reservado</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                        <td><button class="disponivel">Reservar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

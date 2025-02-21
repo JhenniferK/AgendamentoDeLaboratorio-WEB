@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(315deg, rgb(161, 31, 152) 3%, rgba(101,0,94,1) 38%);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 370px;
+    height: 90%;
+    max-height: 520px;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 50px;
+    border-end-end-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.top-section {
+    background: rgba(255, 255, 255, 0.287); 
+    padding: 10px;
+    text-align: center;
+    border-start-start-radius: 50px;
+    flex: 1;
+}
+
+.top-section h1 {
+    font-size: 1.6rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.top-section p {
+    margin-top: 7px;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.login-section {
+    padding: 15px;
+    margin-bottom: -10px;
+    flex: 2;
+}
+
+.login-section h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: -5px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    margin-bottom: 15px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 10px 0 20px 0px;
+    font-size: 0.85rem;
+    color: #eee;
+}
+
+.form-options label {
+    display: flex;
+    white-space: nowrap;
+}
+
+.form-options a {
+    margin-top: -20px;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.form-options input[type="checkbox"] {
+    margin-left: 10px;
+    accent-color: rgba(101, 0, 94, 1);
+}
+
+.btn-login {
+    display: block; 
+    margin: -15px auto 0;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(101, 0, 94, 1);
+    color: #fff;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.btn-login:hover {
+    background: rgb(161, 31, 152);
+    transform: scale(1.05);
+}
+
+.register-option {
+    background-color: #ffffffba;
+    border-end-end-radius: 50px;
+    margin-top: 10px;
+    color: rgb(161, 31, 152);
+    text-align: center;
+    flex: 1;
+}
+
+.register-option h5 {
+    margin: 0;
+    margin-top: 17px;
+    color: rgba(101, 0, 94, 1);
+}
+
+.register-option a {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    display: inline-block;
+    color: rgba(101, 0, 94, 1);
+}
+
+.error, .sucess {
+    color: red;
+    font-size: 12px;
+    display: block;
+}
+
+.sucess {
+    color: green;
+    font-size: 14px;
+    text-align: center;
+}
