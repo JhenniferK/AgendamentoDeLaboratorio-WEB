@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamento - Cadastro</title>
-    <link rel="stylesheet" href="style-register.css">
+    <link rel="stylesheet" href="css/style-register.css">
 </head>
-
 <body>
     <div class="wave"></div>
     <div class="wave"></div>
     <div class="wave"></div>
+
     <div class="container">
         <div class="top-section"></div>
+
         <div class="register-section" id="register-section">
             <h2>CADASTRO</h2>
-            <form>
+            <form id="registerForm">
                 <div class="form-group">
                     <input id="nome" type="text" placeholder="Nome">
                 </div>
                 <div class="form-group">
-                    <input id="mail" type="text" placeholder="E-mail">
+                    <input id="mail" type="email" placeholder="E-mail">
                 </div>
                 <div class="form-group">
-                    <input id="matricula-reg" type="text" placeholder="Matrícula"></input>
+                    <input id="matriculaReg" type="text" placeholder="Matrícula">
                 </div>
                 <div class="form-group">
-                    <input id="senha" type="text" placeholder="Senha">
+                    <input id="senhaRegister" type="password" placeholder="Senha">
                 </div>
                 <div class="form-group">
                     <input id="disciplina" type="text" placeholder="Disciplinas">
@@ -38,6 +37,6 @@
             </form>
         </div>
     </div>
+    <script src="js/register.js"></script>
 </body>
-
 </html>
